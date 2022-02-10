@@ -10,10 +10,8 @@ Projeto desenvolvido no curso de Full Stack da Blue EdTech, aonde o objetivo é 
 
 Esse projeto foi feito por:
 
-* **Leonardo Tinocor** - [umdesenvolvedor](https://github.com/leotinoco7)
-* **Daniel Vinhas** - [fulanodetal](https://github.com/vinhas93)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+* **Leonardo Tinocor** - [GITHUB](https://github.com/leotinoco7)
+* **Daniel Vinhas** - [GITHUB](https://github.com/vinhas93)
 
 ## 🛠️ CONSTRUÍDO COM:
 
