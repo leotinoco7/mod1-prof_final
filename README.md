@@ -1,4 +1,4 @@
-# Título do projeto
+# Título do projeto ![gif_blue](https://user-images.githubusercontent.com/97922512/153515916-ba0103a4-0c19-42a8-927d-1de8fb2d28f8.gif)
 
 Um parágrafo da descrição do projeto vai aqui
 
