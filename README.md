@@ -22,6 +22,6 @@ Framework: JavaScript Vanilla
 
 ## 📄 LICENÇA
 
-Este projeto está sob a licença GNU General Public License v3.0 - veja o arquivo [LICENSE.md](https://github.com/leotinoco7/mod1-prof_final/blob/main/LICENSE.md) para detalhes.
+Este projeto está sob a licença GNU General Public License v3.0 - veja o arquivo [LICENSE.md](https://github.com/leotinoco7/mod1-prof_final/blob/main/LICENSE) para detalhes.
 
 
