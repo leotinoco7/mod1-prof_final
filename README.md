@@ -1,10 +1,13 @@
 # Projeto Final - Blue EdTech // Módulo 1 ! <img src="https://user-images.githubusercontent.com/95504029/151560441-2e792d97-fd65-462c-8fd7-70f581de5674.gif" width="100">
 
-Esse é o 
+Esse é o Projeto Final do primeiro módulo, de Lógica de Programação, da Blue Edtech.
 
 ## 🚀 DESCRIÇÃO:
 
-Projeto desenvolvido no curso de Full Stack da Blue EdTech, aonde o objetivo é criar um programa em JavaScript que jogue pedra,papel ou tesoura (Jokenpô) com você.
+Esse projeto consiste em criar um jogo de ficção interativa que simulas a rotina diária de um personagem.
+Seu objetivo nesse jogo é entregar um projeto para a sua empresa no prazo de 7 dias. Porém, existem obstáculos no caminho.
+Você terá que conciliar suas necessidades diárias
+com o seu trabalho e com o desenvolvimento do projeto. 
 
 ## ✒️ Autores
 
