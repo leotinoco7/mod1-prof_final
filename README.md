@@ -11,7 +11,7 @@ com o seu trabalho e com o desenvolvimento do projeto.
 
 ## ✒️ Autores
 
-Esse projeto foi feito por:
+Esse projeto foi desenvolvido por:
 
 * **Leonardo Tinocor** - [GITHUB](https://github.com/leotinoco7)
 * **Daniel Vinhas** - [GITHUB](https://github.com/vinhas93)
