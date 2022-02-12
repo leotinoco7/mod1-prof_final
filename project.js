@@ -51,7 +51,7 @@ do {
     } while (start !== 0 && start !== 1);
 
     if (start == 0) {
-        console.clear();
+        // console.clear();
         console.log(
             `
     Seu objetivo nesse jogo é entregar um projeto para 
@@ -134,7 +134,6 @@ acessá-la digitando 0 na escolha de ações.
 
     for (day = 1; day < 8; day++) {
         // Contador de Dias
-        console.clear();
         if (day < 7) {
             console.log(
                 `Dia ${day}. Faltam ${
@@ -213,7 +212,7 @@ acessá-la digitando 0 na escolha de ações.
     `);
             do {
                 action = prompt(`Digite a sua ação: `).toLowerCase();
-                console.clear();
+                // console.clear();
                 sleep(500);
                 if (action == 0) {
                     showStatus();
@@ -269,31 +268,6 @@ acessá-la digitando 0 na escolha de ações.
                         sleep(500);
                         day = 8;
                     }
-                    if (timeNow > 21) {
-                        if (day == 7) {
-                            vit = player.Vitalidade;
-                        }
-                        timeNow = 7;
-                        player.Saciedade -= 1.5 * mode;
-                        player.Vitalidade += 15 / mode;
-                        if (player.Vitalidade > 99) {
-                            arredondar(player.Vitalidade);
-                        }
-                        console.log(`
-                        Você Dormiu.
-                        Saciedade - ${1.5 * mode};
-                        Vitalidade está no máximo`);
-                        console.log(`
-                        Você trabalhou um total de ${player['Horas Trabalhadas:']} horas.`);
-                        if (player['Horas Trabalhadas:'] < 4) {
-                            warning++;
-                            console.log(`
-                            Você trabalhou menos que 4 horas! Seu chefe não está nada satisfeito.
-                            É o seu ${warning}° aviso.
-                            `);
-                            sleep(5000);
-                        }
-                    }
                     player.Saciedade = 100;
                     player.Vitalidade = 100;
                     player.Felicidade = 100;
@@ -305,6 +279,28 @@ acessá-la digitando 0 na escolha de ações.
                 break;
             }
         }
+
+        if (day == 7) {
+            vit = player.Vitalidade;
+        }
+        timeNow = 7;
+        player.Saciedade -= 10 * mode;
+        console.log(`
+        Você Dormiu.
+        Saciedade - ${10 * mode};
+        Vitalidade está no máximo`);
+        console.log(`
+        Você trabalhou um total de ${player['Horas Trabalhadas:']} horas.`);
+
+        if (player['Horas Trabalhadas:'] < 4) {
+            warning++;
+            console.log(`
+            Você trabalhou menos que 4 horas! Seu chefe não está nada satisfeito.
+            É o seu ${warning}° aviso.
+            `);
+        }
+        sleep(5000);
+        // console.clear();
         player.Vitalidade = 100;
         player['Horas Trabalhadas:'] = 0;
     }
