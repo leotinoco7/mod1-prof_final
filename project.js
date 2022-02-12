@@ -269,6 +269,31 @@ acessá-la digitando 0 na escolha de ações.
                         sleep(500);
                         day = 8;
                     }
+                    if (timeNow > 21) {
+                        if (day == 7) {
+                            vit = player.Vitalidade;
+                        }
+                        timeNow = 7;
+                        player.Saciedade -= 1.5 * mode;
+                        player.Vitalidade += 15 / mode;
+                        if (player.Vitalidade > 99) {
+                            arredondar(player.Vitalidade);
+                        }
+                        console.log(`
+                        Você Dormiu.
+                        Saciedade - ${1.5 * mode};
+                        Vitalidade está no máximo`);
+                        console.log(`
+                        Você trabalhou um total de ${player['Horas Trabalhadas:']} horas.`);
+                        if (player['Horas Trabalhadas:'] < 4) {
+                            warning++;
+                            console.log(`
+                            Você trabalhou menos que 4 horas! Seu chefe não está nada satisfeito.
+                            É o seu ${warning}° aviso.
+                            `);
+                            sleep(5000);
+                        }
+                    }
                     player.Saciedade = 100;
                     player.Vitalidade = 100;
                     player.Felicidade = 100;
@@ -346,31 +371,6 @@ function GetTime(horas) {
                 player.Vitalidade -= 5;
                 // CheckStatus()
             }
-        } else if (timeNow > 21) {
-            if (day == 7) {
-                vit = player.Vitalidade;
-            }
-            timeNow = 7;
-            player.Saciedade -= 1.5 * mode;
-            player.Vitalidade += 15 / mode;
-            if (player.Vitalidade > 99) {
-                arredondar(player.Vitalidade);
-            }
-            console.log(`
-            Você Dormiu.
-            Saciedade - ${1.5 * mode};
-            Vitalidade está no máximo`);
-            console.log(`
-            Você trabalhou um total de ${player['Horas Trabalhadas:']} horas.`);
-            if (player['Horas Trabalhadas:'] < 4) {
-                warning++;
-                console.log(`
-                Você trabalhou menos que 4 horas! Seu chefe não está nada satisfeito.
-                É o seu ${warning}° aviso.
-                `);
-            }
-            sleep(5000);
-            break;
         }
     }
 }
