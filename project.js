@@ -4,8 +4,7 @@ const prompt = require('prompt-sync')();
 // EXECUTAR O PROGRAMA COM O TERMINAL EM TELA CHEIA PARA NÃO PERDER INFORMAÇÕES IMPORTANTES
 // -----------------------------------------------------------------------------------------
 
-// DEFINED VARIABLES
-
+// Variáveis definidas
 do {
     let timeNow = 7; // max 22 start 7 sempre => Hora do Dia
     let day = 1; // max 7
@@ -16,8 +15,28 @@ do {
     let vit = 0; // Guardar o valor de player.Vitalidade na última execução pra não resetar
     let replay; // Recomeça o Game
     let action; // Escolha de ações
-    let resp;
+    let resp; // Resposta ao convite na função dailyEvent
 
+    // Funções de sleep e arredondar (utilizada caso algum status passe de 100)
+    function sleep(milliseconds) {
+        let start = new Date().getTime();
+        for (let i = 0; i < 1e7; i++) {
+            if (new Date().getTime() - start > milliseconds) {
+                break;
+            }
+        }
+    }
+
+    function arredondar(n) {
+        if (n > 99) {
+            n = 100;
+            return n;
+        } else {
+            return n;
+        }
+    }
+
+    // Status do personagem
     const player = {
         Name: '',
         Saciedade: 100,
@@ -27,7 +46,7 @@ do {
         Projeto: 0,
         'Horas Trabalhadas:': 0,
     };
-
+    // Objeto contendo todas as ações
     const Actions = {
         comer: function () {
             // Ação de comer
@@ -185,7 +204,7 @@ do {
             }
         },
     };
-
+    // Objeto com todas as funções de eventos randômicos diários
     const Testes = {
         dailyEvent: function () {
             let dailyEvent = Math.ceil(Math.random() * 10);
@@ -476,44 +495,36 @@ do {
                 4;
 
             if (media < 20) {
-                console.log(
-                    `Você estava com um aspecto terrivel, você tem um teto para viver?.`,
-                );
+                console.log(`Você estava com um aspecto terrivel, você tem um teto para viver?.
+                `);
             } else if (media < 40) {
-                console.log(
-                    `Você estava Sujo e com roupas desleixadas. Parece que isso não era tão importante para você`,
-                );
+                console.log(`Você estava Sujo e com roupas desleixadas. Parece que isso não era tão importante para você
+                `);
             } else if (media < 60) {
-                console.log(
-                    `Você estava um pouco abatido. Entendo que talvez esse projeto tenha exigido demais de você`,
-                );
+                console.log(`Você estava um pouco abatido. Entendo que talvez esse projeto tenha exigido demais de você
+                    `);
             } else if (media < 80) {
-                console.log(
-                    `Você estava bem apresentável, mas faltou um pouco de confiança na apresentação.`,
-                );
+                console.log(`Você estava bem apresentável, mas faltou um pouco de confiança na apresentação.
+                `);
             } else if (media > 79) {
-                console.log(
-                    `Você foi uma fera! Extremamente carismático e muito bem apresentável.`,
-                );
+                console.log(`Você foi uma fera! Extremamente carismático e muito bem apresentável.
+                    `);
             }
             if (player.Projeto < 20) {
-                console.log(
-                    `Você pagou ao meu filho de 8 anos para fazer o projeto no seu lugar?.`,
-                );
+                console.log(`Você pagou ao meu filho de 8 anos para fazer o projeto no seu lugar?.
+                    `);
             } else if (player.Projeto < 40) {
-                console.log(
-                    `Seu projeto está longe do que eu esperava. Talvez tenha colocado muita exectativa no seu trabalho.`,
-                );
+                console.log(`Seu projeto está longe do que eu esperava. Talvez tenha colocado muita exectativa no seu trabalho.
+                `);
             } else if (player.Projeto < 60) {
-                console.log(
-                    `Podemos usar o seu projeto depois que ele passar por algumas revisões`,
-                );
+                console.log(`Infelizmente, não poderemos aproveitar esse projeto.
+                `);
             } else if (player.Projeto < 80) {
-                console.log(`Seu projeto está bom. Parabéns`);
+                console.log(`Seu projeto está bom. Parabéns
+                `);
             } else if (player.Projeto > 79) {
-                console.log(
-                    `Seu projeto é inovador!! Todos ficarão impressionados com esse resultado.`,
-                );
+                console.log(`Seu projeto é inovador!! Todos ficarão impressionados com esse resultado.
+                    `);
             }
         },
         promocao: function () {
@@ -521,42 +532,38 @@ do {
                 (player.Saciedade + player.Felicidade + player.Higiene + vit) /
                 4;
             if (media > 69 && player.Projeto > 79) {
-                console.log(`
-              Sua apresentação e o conteúdo do seu projeto foram excelentes!
-      
-              Parabéns ${player.Name}, você agora será meu sócio!
-              
-              A cerveja hoje é por minha conta!!!
-      
-              🍺🍺🍺🍺🍺 🍻 
-              🍺🍺🍺🍺🍺   🍻 
-              🍺🍺🍺🍺🍺    🍻
-              🍺🍺🍺🍺🍺   🍻
-              🍺🍺🍺🍺🍺🍻
-              🍺🍺🍺🍺🍺
-              `);
+                console.log(`Sua apresentação e o conteúdo do seu projeto foram excelentes!
+        Parabéns ${player.Name}, você agora será meu sócio!
+        
+        A cerveja hoje é por minha conta!!!
+        
+                            🍺🍺🍺🍺🍺 🍻 
+                            🍺🍺🍺🍺🍺   🍻 
+                            🍺🍺🍺🍺🍺    🍻
+                            🍺🍺🍺🍺🍺   🍻
+                            🍺🍺🍺🍺🍺🍻
+                            🍺🍺🍺🍺🍺         
+        `);
             } else if (media > 49 && player.Projeto > 79) {
-                console.log(`
-              Sua apresentação foi boa e o conteúdo do seu projeto foi excelente.
-      
-              Parabéns ${player.Name}, você foi promovido!`);
+                console.log(`Sua apresentação foi boa e o conteúdo do seu projeto foi excelente.
+        
+        Parabéns ${player.Name}, você foi promovido!
+              `);
             } else if (media > 69 && player.Projeto > 59) {
-                console.log(`
-              Sua apresentação foi excelente e o conteúdo do seu projeto foi bom.
-      
-              Parabéns ${player.Name}, você foi promovido!`);
+                console.log(`Sua apresentação foi excelente e o conteúdo do seu projeto foi bom.
+        
+        Parabéns ${player.Name}, você foi promovido!
+              `);
             } else if (media > 49 && player.Projeto > 59) {
-                console.log(`
-              Sua apresentação e o conteúdo do seu projeto foram bons.
-      
-              Você está no caminho certo ${player.Name}! Mas ainda não foi o suficiente para lhe promover.`);
+                console.log(`Sua apresentação e o conteúdo do seu projeto foram bons.
+        
+        Você está no caminho certo ${player.Name}! Mas ainda não foi o suficiente para lhe promover.
+              `);
             } else {
-                console.log(`
-              Não tenho palavras para descrever o que vi aqui.
-      
-              ${player.Name}, percebo que seu desempenho está a quem de nossos objetivos...
+                console.log(`${player.Name}, percebo que seu desempenho está a quem de nossos objetivos...
               
-              Você está Demitido.`);
+        Você está Demitido!
+            `);
             }
         },
         descanso: function () {
@@ -593,7 +600,7 @@ do {
             return replay;
         },
     };
-
+    // Início do código
     console.log(`
     ╔+++++++++++++++++++++╗
        Life as a Project!                
@@ -608,18 +615,17 @@ do {
     player.Name = prompt(`Digite seu nome: `);
     console.log();
     do {
-        var start = +prompt(
+        var play = +prompt(
             `Digite 1 para começar a jogar ou 0 e eu lhe explicarei as regras: `,
         );
 
-        if (start !== 0 && start !== 1) {
+        if (play !== 0 && play !== 1) {
             console.log(`
         Resposta inválida!`);
         }
-    } while (start !== 0 && start !== 1);
+    } while (play !== 0 && play !== 1);
 
-    if (start == 0) {
-        // console.clear();
+    if (play == 0) {
         console.log(
             `
     Seu objetivo nesse jogo é entregar um projeto para 
@@ -667,7 +673,6 @@ acessá-la digitando 0 na escolha de ações.
 `);
     }
     sleep(1500);
-    // intro
     console.log(`Selecione o modo de dificuldade (1 a 3):
 `);
 
@@ -703,7 +708,7 @@ acessá-la digitando 0 na escolha de ações.
     } else if (MODE == 3 || MODE == 'dificil') {
         mode = 3;
     }
-    // First Action
+    // Loop de ações
 
     for (day = 1; day < 8; day++) {
         // Contador de Dias
@@ -871,7 +876,7 @@ acessá-la digitando 0 na escolha de ações.
         console.log(`Você morreu!`);
         sleep(1000);
     }
-
+    // end game
     Testes.Replay();
 } while (replay == 'sim');
 {
@@ -888,22 +893,4 @@ acessá-la digitando 0 na escolha de ações.
   `);
     sleep(500);
     console.log(`Daniel Vinhas - https://github.com/vinhas93`);
-}
-
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if (new Date().getTime() - start > milliseconds) {
-            break;
-        }
-    }
-}
-
-function arredondar(n) {
-    if (n > 99) {
-        n = 100;
-        return n;
-    } else {
-        return n;
-    }
 }
