@@ -16,6 +16,7 @@ do {
     let vit = 0; // Guardar o valor de player.Vitalidade na última execução pra não resetar
     let replay; // Recomeça o Game
     let action; // Escolha de ações
+    let resp;
 
     const player = {
         Name: '',
@@ -189,79 +190,88 @@ do {
         dailyEvent: function () {
             let dailyEvent = Math.ceil(Math.random() * 10);
             if (dailyEvent == 1) {
-                console.log(`Está muito frio la fora. Sua coberta ficou muito mais atrativa hoje.
+                console.log(`
+                Está muito frio la fora. Sua coberta ficou muito mais atrativa hoje.
                  
-                 Você acorda 1h mais tarde.
-                 Saciedade - 10
+                Você acorda 1h mais tarde.
+                Saciedade - 10
                  `);
                 timeNow++;
                 player.Saciedade -= 10;
             } else if (dailyEvent == 2) {
-                console.log(`O dia estava muito quente e seu ar condicionado quebrou durante a noite. 
-                 Você acorda mais cedo suando.
+                console.log(`
+                O dia estava muito quente e seu ar condicionado quebrou durante a noite. 
+                Você acorda mais cedo suando.
                  `);
                 timeNow--;
                 player.Vitalidade -= 30 * (mode / 2);
                 player.Higiene -= 20 * (mode / 2);
             } else if (dailyEvent == 3) {
-                console.log(`Choveu muito e acabou a luz na sua casa! Seu celular estava carregando
-                 mas acabou desligando! Você acordou 2 horas depois sem despertador
-                 Felicidade - ${10 * (mode / 2)}
-                 Saciedade - 20
+                console.log(`
+                Choveu muito e acabou a luz na sua casa! Seu celular estava carregando
+                mas acabou desligando! Você acordou 2 horas depois sem despertador
+                Felicidade - ${10 * (mode / 2)}
+                Saciedade - 20
                  `);
                 timeNow += 2;
                 player.Felicidade -= 10 * (mode / 2);
                 player.Saciedade -= 20;
             } else if (dailyEvent == 4) {
-                console.log(`Seu vizinho resolveu fazer um reparo em casa antes de ir pro trabalho,
-                 você acabou acordando mais cedo com o barulho da furadeira.
-                 Felicidade - ${10 * (mode / 2)} `);
+                console.log(`   Seu vizinho resolveu fazer um reparo em casa antes de ir pro trabalho,
+                você acabou acordando mais cedo com o barulho da furadeira.
+                Felicidade - ${10 * (mode / 2)} `);
                 timeNow--;
                 player.Felicidade -= 10 * (mode / 2);
             } else if (dailyEvent == 5) {
-                console.log(`Seu chefe te acorda pedindo um relatório urgente. 
-                 Será que ele percebeu que ainda eram 5h da manhã?
+                console.log(`
+                Seu chefe te acorda pedindo um relatório urgente. 
+                Será que ele percebeu que ainda eram 5h da manhã?
                  
-                 Você não conseguiu voltar a dormir.
-                 Felicidade - ${20 * (mode / 2)}`);
+                Você não conseguiu voltar a dormir.
+                Felicidade - ${20 * (mode / 2)}`);
                 timeNow -= 2;
                 player.Felicidade -= 20 * (mode / 2);
             } else if (dailyEvent == 6) {
-                console.log(`Os resultados da sua empresa foram excelentes! Você acorda com o e-mail
-                 que sua PLR virá praticamente dobrada
-                 Felicidade + ${20 / (mode / 2)}`);
+                console.log(`   
+                Os resultados da sua empresa foram excelentes! Você acorda com o e-mail
+                que sua PLR virá praticamente dobrada
+                Felicidade + ${20 / (mode / 2)}`);
                 player.Felicidade += 20 / (mode / 2);
             } else if (dailyEvent == 7) {
-                console.log(`Lembra aquele projeto que você enviou para o seu chefe? O diretor gostou bastante
-                 e te enviou um convite para uma reunião. Será que vem a promoção?
-                 Felicidade + ${20 / (mode / 2)}
+                console.log(`
+                Lembra aquele projeto que você enviou para o seu chefe? O diretor gostou bastante
+                e te enviou um convite para uma reunião. Será que vem a promoção?
+                Felicidade + ${20 / (mode / 2)}
                  `);
                 player.Felicidade += 20 / (mode / 2);
             } else if (dailyEvent == 8) {
-                console.log(`Você recebeu uma cesta de café da manhã da sua empresa.
-                 Por acaso hoje é alguma data especial?
+                console.log(`
+                Você recebeu uma cesta de café da manhã da sua empresa.
+                Por acaso hoje é alguma data especial?
          
-                 Felicidade + ${10 / (mode / 2)}
-                 Saciedade + ${30 / (mode / 2)}
+                Felicidade + ${10 / (mode / 2)}
+                Saciedade + ${30 / (mode / 2)}
                 `);
                 player.Felicidade + 10 / (mode / 2);
                 player.Saciedade + 30 / (mode / 2);
             } else if (dailyEvent == 9) {
-                console.log(`O tempo estava muito bonito e você acordou mais cedo para tomar um banho de mar antes de trabalhar.
-                 Você se sente revigorado.
-                 Felicidade + ${10 / (mode / 2)}
-                 Higiene + ${10 / (mode / 2)}`);
+                console.log(`
+                O tempo estava muito bonito e você acordou mais cedo para tomar um banho de mar antes de trabalhar.
+                Você se sente revigorado.
+                Felicidade + ${10 / (mode / 2)}
+                Higiene + ${10 / (mode / 2)}`);
                 player.Felicidade + 10 / (mode / 2);
                 player.Higiene + 10 / (mode / 2);
             } else if (dailyEvent == 10) {
-                console.log(`Sua mãe ganhou na loto. Ela te ofereceu uma diária em um hotal 5 estrelas.
+                console.log(`
+                Sua mãe ganhou na loto. Ela te ofereceu uma diária em um hotal 5 estrelas.
                  
-                 Você aceita o convite?
+                Você aceita o convite?
                      1)Sim        2)Não
                  `);
 
                 do {
-                    let resp = prompt(`R:`).toLowerCase();
+                    resp = prompt(`R:`).toLowerCase();
                     if (
                         resp != 1 &&
                         resp != 2 &&
@@ -300,7 +310,7 @@ do {
             }
         },
         dayTime: function () {
-            if (timeNow >= 7 && timeNow <= 12) {
+            if (timeNow >= 5 && timeNow <= 12) {
                 return `
                 Bom dia`;
             } else if (timeNow > 12 && timeNow < 18) {
@@ -713,17 +723,28 @@ acessá-la digitando 0 na escolha de ações.
             player.Higiene = arredondar(player.Higiene);
             player.Projeto = arredondar(player.Projeto);
             if (timeNow == 7) {
+                console.log(``);
                 Testes.dailyEvent();
             }
             console.log(
                 `
     ---------------------------------------------------------------------------------
-                ${Testes.dayTime()}`` ${player.Name},${timeNow} horas do ${day}° dia na sua jornada!
+                ${Testes.dayTime()}, ${
+                    player.Name
+                } são ${timeNow} horas do ${day}° dia na sua jornada!
 
                                 • Seus status são:
-                Saciedade: ${player.Saciedade}                       Vitalidade: ${player.Vitalidade}
-                Felicidade: ${player.Felicidade}                      Higiene: ${player.Higiene}
-                Seu projeto está ${player.Projeto}% concluído        Você trabalhou ${player['Horas Trabalhadas:']} horas hoje.   
+                Saciedade: ${
+                    player.Saciedade
+                }                       Vitalidade: ${player.Vitalidade}
+                Felicidade: ${
+                    player.Felicidade
+                }                      Higiene: ${player.Higiene}
+                Seu projeto está ${
+                    player.Projeto
+                }% concluído        Você trabalhou ${
+                    player['Horas Trabalhadas:']
+                } horas hoje.   
                 `,
             );
             sleep(250);
