@@ -56,7 +56,7 @@ do {
             console.log(`
             Você faz a sua comida. 
             Levou 3h para fazer e comer, mas ela é muito mais Saudável.
-            Saciedade + ${60 / mode + 20}
+            Saciedade + ${60 / mode + 30}
             Higiene + ${45 / mode}
             Felicidade - 10
             Vitalidade - 15
@@ -770,29 +770,29 @@ acessá-la digitando 0 na escolha de ações.
             sleep(250);
             console.log(`
     1)Fazer comida:         3 horas         (Saciedade + ${arredondar(
-        60 / mode + 60,
-    )} / Higiene + ${45 / mode + 15} / Felicidade + 5)    
+        60 / mode + 30,
+    )} / Higiene + ${45 / mode})    
     2)Comer Fastfood:       1 hora          (Saciedade + ${
-        60 / mode + 30
-    } / Higiene - ${10 * mode - 5} / Felicidade + 25)     
+        60 / mode + 20
+    } / Higiene - ${10 * mode} / Felicidade + 20)     
     3)Estudar:              2 horas         (Felicidade - ${
-        10 * mode - 5
-    } / Vitalidade - ${5 * mode - 5} / Projeto + 10)              
+        10 * mode + 5
+    } / Vitalidade - ${5 * mode + 5} / Projeto + 10%)              
     4)Assistir Serie:       1 horas         (Felicidade + ${
         45 / mode
-    } / Vitalidade - ${5 * mode + 5} / Saciedade - 20 / Higiene - 20)
+    } / Vitalidade - ${5 * mode})
     5)Trabalhar:            2 horas         (Felicidade - ${
-        10 * mode - 5
-    } / Vitalidade - ${8 * mode - 10} / Horas Trabalhadas + 2)
+        10 * mode + 5
+    } / Vitalidade - ${8 * mode} / Horas Trabalhadas + 2)
     6)Passear:              2 horas         (Felicidade + ${
-        45 / mode + 10
-    } / Vitalidade - ${5 * mode - 10})
+        45 / mode
+    } / Vitalidade - ${5 * mode})
     7)Fazer exercicio:      2 horas         (Felicidade + ${
-        45 / mode + 10
-    } / Vitalidade - ${5 * mode - 10} / Higiene + ${30 / mode + 10})
+        45 / mode
+    } / Vitalidade - ${5 * mode} / Higiene + ${30 / mode})
     8)Tomar banho:          1 hora          (Felicidade + ${
-        30 / mode + 5
-    } / Higiene + ${60 / mode + 5} / Vitalidade + ${60 / mode + 5}) 
+        30 / mode
+    } / Higiene + ${60 / mode} / Vitalidade + ${60 / mode}) 
     `);
             do {
                 action = prompt(`Digite a sua ação: `).toLowerCase();
