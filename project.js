@@ -649,7 +649,12 @@ pelo menos 4 horas, irá ganhar uma advertência.
 
     Ao chegar a 3, você perderá o jogo.
 `);
+        sleep(1000);
 
+        console.log(`
+    Todo dia ao acordar, um evento aleatório irá acontecer no seu jogo,
+ele pode ser positivo ou negativo para o seu personagem!
+`);
         sleep(1000);
 
         console.log(`
