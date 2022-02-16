@@ -20,7 +20,10 @@ Esse projeto foi desenvolvido por:
 
 Linguagem: JavaScript  
 Motor: NodeJS  
-Framework: JavaScript Vanilla  
+Framework: JavaScript Vanilla 
+
+### 📋 Fluxograma (clique para aumentar)
+<img scr="https://user-images.githubusercontent.com/97922512/154181111-688297a2-39ff-4052-8ff7-e7312d2bea2a.jpg">
 
 
 ## 📄 LICENÇA
