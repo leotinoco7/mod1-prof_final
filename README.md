@@ -2,12 +2,14 @@
 
 Esse é o Projeto Final do primeiro módulo, de Lógica de Programação, da Blue Edtech.
 
+
 ## 🚀 DESCRIÇÃO:
 
 Esse projeto consiste em criar um jogo de ficção interativa que simulas a rotina diária de um personagem.
 Seu objetivo nesse jogo é entregar um projeto para a sua empresa no prazo de 7 dias. Porém, existem obstáculos no caminho.
 Você terá que conciliar suas necessidades diárias
 com o seu trabalho e com o desenvolvimento do projeto. 
+
 
 ## ✒️ Autores
 
@@ -16,11 +18,13 @@ Esse projeto foi desenvolvido por:
 * **Leonardo Tinocor** - [GITHUB](https://github.com/leotinoco7)
 * **Daniel Vinhas** - [GITHUB](https://github.com/vinhas93)
 
+
 ## 🛠️ CONSTRUÍDO COM:
 
 Linguagem: JavaScript  
 Motor: NodeJS  
 Framework: JavaScript Vanilla 
+
 
 ## 📋 FLUXOGRAMA (clique para aumentar):
 <img src="https://user-images.githubusercontent.com/97922512/154181111-688297a2-39ff-4052-8ff7-e7312d2bea2a.jpg">
