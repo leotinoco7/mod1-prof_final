@@ -22,7 +22,7 @@ Linguagem: JavaScript
 Motor: NodeJS  
 Framework: JavaScript Vanilla 
 
-### 📋 FLUXOGRAMA (clique para aumentar):
+## 📋 FLUXOGRAMA (clique para aumentar):
 <img src="https://user-images.githubusercontent.com/97922512/154181111-688297a2-39ff-4052-8ff7-e7312d2bea2a.jpg">
 
 
