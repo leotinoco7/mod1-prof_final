@@ -1,6 +1,5 @@
-# Project: Life (Projeto Final) Blue EdTech // Módulo 1 ! <img src="https://user-images.githubusercontent.com/95504029/151560441-2e792d97-fd65-462c-8fd7-70f581de5674.gif" width="130">
-
-Esse é o Projeto Final do primeiro módulo de Lógica de Programação, da Blue Edtech.
+# Project: Life ! <img src="https://user-images.githubusercontent.com/95504029/151560441-2e792d97-fd65-462c-8fd7-70f581de5674.gif" width="100">
+### Projeto Final do Módulo 1 - Lógica de programação - Blue EdTech
 
 
 ## 🚀 DESCRIÇÃO:
