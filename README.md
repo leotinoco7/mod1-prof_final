@@ -15,8 +15,8 @@ com o seu trabalho e com o desenvolvimento do projeto.
 
 Esse projeto foi desenvolvido por:
 
-* **Leonardo Tinocor** - [GITHUB](https://github.com/leotinoco7)
-* **Daniel Vinhas** - [GITHUB](https://github.com/vinhas93)
+* **Leonardo Tinocor** - [LINKTREE](https://linktr.ee/leotinoco7)
+* **Daniel Vinhas** - [LINKEDIN](https://www.linkedin.com/in/daniel-vinhas-84343390/)
 
 
 ## 🛠️ CONSTRUÍDO COM:
