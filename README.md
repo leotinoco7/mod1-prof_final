@@ -4,13 +4,15 @@
 
 ## 🚀 DESCRIÇÃO:
 
-  Seu objetivo nesse jogo é entregar um projeto para a sua empresa no prazo de 7 dias.
-Porém, existem obstáculos no caminho.
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Seu objetivo nesse jogo é entregar um projeto para 
+a sua empresa no prazo de 7 dias.<br>
+  Porém, existem obstáculos
+no caminho. <p/>
 
-     Será que você consegue superar as espectativas de seu chefe?
-Ele irá avaliar a sua apresentação em detalhes e selar o seu destino!
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Será que você consegue superar as espectativas de seu chefe?<br>
+Ele irá avaliar a sua apresentação em detalhes e selar o seu destino!<p/>
 
-     Você é digno de se tornar um sócio? Ou será mandado pra Rua?
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Você é digno de se tornar um sócio? Ou será mandado pra Rua?<p/>
 
 ## ✒️ Autores
 
