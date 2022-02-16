@@ -4,11 +4,13 @@
 
 ## 🚀 DESCRIÇÃO:
 
-Esse projeto consiste em criar um jogo de ficção interativa que simulas a rotina diária de um personagem.
-Seu objetivo nesse jogo é entregar um projeto para a sua empresa no prazo de 7 dias. Porém, existem obstáculos no caminho.
-Você terá que conciliar suas necessidades diárias
-com o seu trabalho e com o desenvolvimento do projeto. 
+  Seu objetivo nesse jogo é entregar um projeto para a sua empresa no prazo de 7 dias.
+Porém, existem obstáculos no caminho.
 
+     Será que você consegue superar as espectativas de seu chefe?
+Ele irá avaliar a sua apresentação em detalhes e selar o seu destino!
+
+     Você é digno de se tornar um sócio? Ou será mandado pra Rua?
 
 ## ✒️ Autores
 
