@@ -21,9 +21,9 @@ Esse projeto foi desenvolvido por:
 
 ## 🛠️ CONSTRUÍDO COM:
 
-Linguagem: JavaScript  
-Motor: NodeJS  
-Framework: JavaScript Vanilla 
+**Linguagem:** JavaScript  
+**Motor:** NodeJS  
+**Framework:** JavaScript Vanilla 
 
 
 ## 📋 FLUXOGRAMA (clique para aumentar):
